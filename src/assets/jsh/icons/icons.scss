@@ -1,0 +1,490 @@
+// jsh
+
+$icon:"assets/jsh/icons/";
+
+/******************************************************图标******************************************************/
+@mixin icon($name,$w:0.56rem,$h:0.56rem){
+    display: block;
+    width:$w;
+    height:$h;
+    overflow: hidden;
+    &:after{
+        display: block;
+        position: relative;
+        content: '';
+        width: 100%;
+        height: 100%;
+        left:0;
+        background-image:url($icon+$name);
+        background-repeat: no-repeat;
+        background-position:center;
+        background-size:auto 100%;
+    }
+}
+@mixin filter($name,$c:#fff,$w:0.56rem,$h:0.56rem){
+    @if ($w==0.56rem){
+        &:after{
+            position: relative;
+            height:200%;
+            background-position-y:50%;
+            background-size:auto 50%;
+            top: -150%;
+            filter:drop-shadow(0 $h 0 $c);
+        }
+    }@else{
+        width:$w;
+        height:$h;
+        &:after{
+            position: relative;
+            height: 200%;
+            background-position:center center;
+            background-size:auto 50%;
+            top: -150%;
+            filter:drop-shadow(0 $h 0 $c);
+        }
+    }
+}
+
+//添加#app  避开flex影响
+#app{
+    .icon_home{
+        @include icon("home.png")
+    }
+    .icon_access{
+        @include icon("access.png")
+    }
+    .icon_account{
+        @include icon("account.png")
+    }
+    .icon_lobby{
+        @include icon("lobby.png")
+    }
+    .icon_service{
+        @include icon("service.png")
+    }
+    .icon_cha{
+        @include icon("cha.png",0.4rem,0.4rem);
+    }
+    .icon_arrow{
+        @include icon("arrow.png",0.4rem,0.4rem);
+    }
+    .icon_entry{
+        @include icon("entry.png",0.35rem,0.42rem);
+    }
+    .icon_msg{
+        @include icon("msg.png",0.29rem,0.42rem);
+    }
+    .icon_register{
+        @include icon("register.png",0.4rem,0.4rem);
+    }
+
+    .icon_notice{
+        @include icon("notice.gif",1.24rem,0.6rem);
+    }
+    .icon_discount{
+        @include icon("discount.png");
+    }
+    .icon_apply{
+        @include icon("apply.png");
+    }
+    .icon_lijin{
+        @include icon("lijin.png");
+    }
+    .icon_down{
+        @include icon("down.png");
+    }
+    .icon_vip{
+        @include icon("vip.png");
+    }
+    .icon_partner{
+        @include icon("partner.png");
+    }
+    .icon_logo{
+        @include icon("logo.png",0.8rem,0.8rem);
+    }
+    .icon_tick{
+        @include icon("tick.png",0.4rem,0.4rem);
+    }
+    .icon_eye_open{
+        @include icon("eye_open.png",0.4rem,0.4rem);
+    }
+    .icon_eye_close{
+        @include icon("eye_close.png",0.4rem,0.4rem);
+    }
+    .icon_sign{
+        @include icon("sign.png");
+    }
+    .icon_star{
+        @include icon("star.png",0.4rem,0.4rem);
+    }
+    .icon_magnifier{
+        @include icon("magnifier.png",0.64rem,0.64rem);
+    }
+    .icon_total{
+        @include icon("total.png",0.64rem,0.64rem);
+    }
+    .icon_lottery{
+        @include icon("lottery.png",0.64rem,0.64rem);
+    }
+    .icon_live{
+        @include icon("live.png",0.64rem,0.64rem);
+    }
+    .icon_laohuji{
+        @include icon("laohuji.png",0.64rem,0.64rem);
+    }
+    .icon_fish{
+        @include icon("fish.png",0.64rem,0.64rem);
+    }
+    .icon_sport{
+        @include icon("sport.png",0.64rem,0.64rem);
+    }
+    //手工存款
+    .icon_wangyin{
+        @include icon("wangyin.png");
+    }
+    .icon_atm{
+        @include icon("atm.png");
+    }
+    .icon_weixin{
+        @include icon("weixin.png");
+    }
+    .icon_guitai{
+        @include icon("guitai.png");
+    }
+    .icon_alipay{
+        @include icon("alipay.png");
+    }
+    .icon_shanfu{
+        @include icon("shanfu.png");
+    }
+
+    //在线支付
+    .icon_wangyin2{
+        @include icon("wangyin2.png");
+    }
+    .icon_weixin2{
+        @include icon("weixin2.png");
+    }
+    .icon_alipay2{
+        @include icon("alipay2.png");
+    }
+    .icon_kuaijie{
+        @include icon("kuaijie.png");
+    }
+    .icon_qq{
+        @include icon("qq.png");
+    }
+    .icon_jd{
+        @include icon("jd.png");
+    }
+    .icon_yinlian{
+        @include icon("yinlian.png");
+    }
+    .icon_dianka{
+        @include icon("dianka.png");
+    }
+    .icon_tikuan{
+        @include icon("tikuan.png");
+    }
+    .icon_arror_down{
+        @include icon("arror_down.png",0.4rem,0.4rem);
+    }
+    .icon_arror_right{
+        @include icon("arror_right.png",0.48rem,0.48rem);
+    }
+    //账户
+    .icon_wealth{
+        @include icon("wealth.png",0.48rem,0.48rem);
+    }
+    .icon_wealth{
+        @include icon("wealth.png",0.48rem,0.48rem);
+    }
+    .icon_wealth{
+        @include icon("wealth.png",0.48rem,0.48rem);
+    }
+    .icon_edu{
+        @include icon("edu.png",0.48rem,0.48rem);
+    }
+    .icon_jilv{
+        @include icon("jilv.png",0.48rem,0.48rem);
+    }
+    .icon_jilv2{
+        @include icon("jilv2.png",0.48rem,0.48rem);
+    }
+    .icon_bank{
+        @include icon("bank.png",0.48rem,0.48rem);
+    }
+    .icon_password{
+        @include icon("password.png",0.48rem,0.48rem);
+    }
+    .icon_pt{
+        @include icon("pt.png",0.48rem,0.48rem);
+    }
+
+    .icon_dt{
+        @include icon("dt.png",0.48rem,0.48rem);
+    }
+
+    .icon_name{
+        @include icon("name.png",0.48rem,0.48rem);
+    }
+    .icon_idcard{
+        @include icon("idcard.png",0.48rem,0.48rem);
+    }
+    .icon_tel{
+        @include icon("tel.png",0.48rem,0.48rem);
+    }
+    .icon_email{
+        @include icon("email.png",0.48rem,0.48rem);
+    }
+    .icon_sms{
+        @include icon("sms.png",0.48rem,0.48rem);
+    }
+    .icon_xiaoxi{
+        @include icon("xiaoxi.png",0.48rem,0.48rem);
+    }
+    .icon_tuichu{
+        @include icon("tuichu.png",0.48rem,0.48rem);
+    }
+    .icon_qr{
+        @include icon("qr.png",0.48rem,0.48rem);
+    }
+    .icon_huidian{
+        @include icon("huidian.png",0.88rem,0.88rem);
+    }
+    .icon_live800{
+        @include icon("live800.png",0.88rem,0.88rem);
+    }
+    .icon_weixin3{
+        @include icon("weixin3.png",0.88rem,0.88rem);
+    }
+    .icon_qq1{
+        @include icon("qq.png",0.88rem,0.88rem);
+    }
+
+    .icon_cun{
+        @include icon("cun.png",0.64rem,0.64rem);
+    }
+    .icon_qu{
+        @include icon("qu.png",0.64rem,0.64rem);
+    }
+    .icon_youhui{
+        @include icon("youhui.png",0.64rem,0.64rem);
+    }
+    .icon_jilv3{
+        @include icon("jilv2.png",0.64rem,0.64rem);
+    }
+    .icon_bangdan{
+        @include icon("bangdan.png",0.64rem,0.64rem);
+    }
+    .icon_guoqi{
+        @include icon("guoqi.png",0.64rem,0.64rem);
+    }
+    .icon_changqi{
+        @include icon("changqi.png",0.64rem,0.64rem);
+    }
+    .icon_yishiyong{
+        @include icon("yishiyong.png",0.64rem,0.64rem);
+    }
+    .icon_weishiyong{
+        @include icon("weishiyong.png",0.64rem,0.64rem);
+    }
+    .icon_yijieshu{
+        @include icon("yijieshu.png",1rem,1rem);
+    }
+    .icon_email_no{
+        @include icon("email_no.png",0.45rem,0.45rem);
+    }
+    .icon_qipai{
+        @include icon("qipai.png",0.64rem,0.64rem);
+    }
+    // 选中效果
+    .router-link-active{
+        .icon_home{
+            @include filter("home.png", #00bff3)
+        }
+        .icon_access{
+            @include filter("access.png", #00bff3)
+        }
+        .icon_account{
+            @include filter("account.png", #00bff3)
+        }
+        .icon_lobby{
+            @include filter("lobby.png", #00bff3)
+        }
+        .icon_service{
+            @include filter("service.png", #00bff3)
+        }
+    }
+    .table_box{
+        .icon_cha{
+            @include filter("cha.png",#ff0000,0.4rem,0.4rem);
+        }
+        .icon_email{
+            @include filter("email.png",#6b6060,0.45rem,0.45rem);
+        }
+    }
+    .nav_box{
+        .icon_service{
+            @include filter("service.png", #00bff3,0.48rem,0.48rem)
+        }
+    }
+    .tab_navs{
+        li:nth-child(1){
+            .icon_discount{
+                @include filter("discount.png",#e36b60,0.64rem,0.64rem);
+            }
+        }
+        li:nth-child(4){
+            .icon_guoqi{
+                @include filter("guoqi.png",#fdcf72,0.64rem,0.64rem);
+            }
+        }
+        li.active{
+            .icon_discount{
+                @include filter("discount.png",#fff,0.64rem,0.64rem);
+            }
+            .icon_guoqi{
+                @include filter("guoqi.png",#fff,0.64rem,0.64rem);
+            }
+        }
+    }
+    //选中效果
+    .active{
+        .icon_qipai{
+            @include filter("qipai.png",#fff,0.64rem,0.64rem);
+        }
+        .icon_changqi{
+            @include filter("changqi.png",#fff,0.64rem,0.64rem);
+        }
+        .icon_bangdan{
+            @include filter("bangdan.png",#fff,0.64rem,0.64rem);
+        }
+
+        .icon_yishiyong{
+            @include filter("yishiyong.png",#fff,0.64rem,0.64rem);
+        }
+        .icon_weishiyong{
+            @include filter("weishiyong.png",#fff,0.64rem,0.64rem);
+        }
+        .icon_cun{
+            @include filter("cun.png",#fff,0.64rem,0.64rem);
+        }
+        .icon_qu{
+            @include filter("qu.png",#fff,0.64rem,0.64rem);
+        }
+        .icon_jilv3{
+            @include filter("jilv2.png",#fff,0.64rem,0.64rem);
+        }
+        .icon_youhui{
+            @include filter("youhui.png",#fff,0.64rem,0.64rem);
+        }
+        .icon_total{
+            @include filter("total.png",#fff,0.64rem,0.64rem);
+        }
+        .icon_lottery{
+            @include filter("lottery.png",#fff,0.64rem,0.64rem);
+        }
+        .icon_live{
+            @include filter("live.png",#fff,0.64rem,0.64rem);
+        }
+        .icon_laohuji{
+            @include filter("laohuji.png",#fff,0.64rem,0.64rem);
+        }
+        .icon_fish{
+            @include filter("fish.png",#fff,0.64rem,0.64rem);
+        }
+        .icon_sport{
+            @include filter("sport.png",#fff,0.64rem,0.64rem);
+        }
+        .icon_step2{
+            @include filter("step2.png",#00bff3,0.5rem,0.5rem);
+        }
+        .icon_arror_right{
+            @include filter("arror_right.png");
+        }
+    }
+    // title
+    .crumbs{
+        //账户
+        .icon_sms{
+            @include filter("sms.png",#fff,0.55rem,0.55rem);
+        }
+        .icon_email{
+            @include filter("email.png",#fff,0.55rem,0.55rem);
+        }
+        .icon_pt{
+            @include filter("pt.png",#fff,0.55rem,0.55rem);
+        }
+        .icon_dt{
+            @include filter("dt.png",#fff,0.55rem,0.55rem);
+        }
+        .icon_password{
+            @include filter("password.png",#fff,0.55rem,0.55rem);
+        }
+        .icon_jilv{
+            @include filter("jilv.png",#fff,0.55rem,0.55rem);
+        }
+        .icon_name{
+            @include filter("name.png",#fff,0.55rem,0.55rem);
+        }
+        .icon_tel{
+            @include filter("tel.png",#fff,0.55rem,0.55rem);
+        }
+        .icon_account{
+            @include filter("account.png")
+        }
+        .icon_bank{
+            @include filter("bank.png",#fff,0.55rem,0.55rem);
+        }
+        //手工存款
+        .icon_wangyin{
+            @include filter("wangyin.png");
+        }
+        .icon_atm{
+            @include filter("atm.png");
+        }
+        .icon_weixin{
+            @include filter("weixin.png");
+        }
+        .icon_guitai{
+            @include filter("guitai.png");
+        }
+        .icon_alipay{
+            @include filter("alipay.png");
+        }
+        .icon_shanfu{
+            @include filter("shanfu.png");
+        }
+
+        //在线支付
+        .icon_wangyin2{
+            @include filter("wangyin2.png");
+        }
+        .icon_weixin2{
+            @include filter("weixin2.png");
+        }
+        .icon_alipay2{
+            @include filter("alipay2.png");
+        }
+        .icon_kuaijie{
+            @include filter("kuaijie.png");
+        }
+        .icon_qq{
+            @include filter("qq.png");
+        }
+        .icon_jd{
+            @include filter("jd.png");
+        }
+        .icon_yinlian{
+            @include filter("yinlian.png");
+        }
+        .icon_dianka{
+            @include filter("dianka.png");
+        }
+        .icon_tikuan{
+            @include filter("tikuan.png");
+        }
+    }
+}
+
